@@ -1,0 +1,38 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/********* Snackbar Scss Start *********/
+
+@mixin snackbar($bgcolor) {
+  width: 50vw !important;
+  color: #fff;
+  background: $bgcolor;
+  margin: 1em auto !important;
+  text-transform: capitalize;
+
+  simple-snack-bar {
+    justify-content: center;
+  }
+}
+
+.snackbar {
+  &-error {
+    @include snackbar(#c0392b);
+  }
+
+  &-success {
+    @include snackbar(#27ae60);
+  }
+}
+
+/********* Snackbar Scss End *********/
